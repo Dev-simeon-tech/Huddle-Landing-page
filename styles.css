@@ -24,14 +24,12 @@ body{
     }
 }
 main{
-    background-image: linear-gradient(hsl(193, 100%, 96%),hsl(193, 100%, 96%)),
-     url(images/bg-hero-desktop.svg);
-    background-size: cover;
+    background-image: linear-gradient(180deg, hsl(193, 100%, 96%) 0%, hsl(193, 100%, 96%) 54%),
+    url('images/bg-hero-desktop.svg');
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    /* background-attachment: fixed; */
     padding: 0 4rem 4rem 4rem;
-
 }
 header{
     display: flex;
@@ -59,7 +57,8 @@ header{
     align-items: center;
     justify-content: center;
     gap: 3rem;
-    padding-top: 8rem;  
+    padding-top: 8rem;
+     
 }
 .main-inner{
     display: flex;
@@ -139,7 +138,6 @@ header{
     align-items: center;
     padding: 4rem;
     padding-left: 7rem;
-    /* border: 3px solid black; */
     border-radius: 12px;
     box-shadow: -1px 1px 10px 2px rgba(68, 64, 58, 0.2);
 
@@ -206,7 +204,9 @@ header{
     }
 }
 .foot-logo{
-    fill: #fff;
+    filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(251deg) brightness(154%) contrast(151%);
+    padding-left: 12px;
+
 }
 .footer{
     display: flex;
@@ -251,23 +251,30 @@ header{
 }
 .social-cont .icon:is(:hover, :focus){
     fill: var(--Pink);
-    stroke: var(--Pink);
+    filter: invert(62%) sepia(39%) saturate(7436%) hue-rotate(296deg) brightness(104%) contrast(101%);
 }
 .icon-logo{
     width: 40px;
-    fill: #fff;
-    
+    fill: #fff;   
 }
 @media(max-width:600px){
     .footer{
         flex-direction: column;
-        padding:7rem 0;
+        padding:10rem 0 2rem 0;
         justify-content: left;
         align-items: start;
     }
     .footer .list-link{
         columns: 1;
         padding: 0;
+    }
+    .inline{
+        margin-left: 30px;
+    }
+    .fa-location-dot{
+        display: inline;
+        position: relative;
+        top: 30px;
     }
     .social-cont{
         align-items: center;
